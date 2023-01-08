@@ -25,7 +25,7 @@ export default {
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
 		'~/assets/css/reseter.css',
-		'~/assets/css/bootstrap-grid.min.scss',
+		'~/assets/css/bootstrap-grid.min.css',
 		'~/assets/scss/main.scss'
 	],
 

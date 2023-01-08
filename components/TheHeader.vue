@@ -6,9 +6,9 @@
 					<nuxt-link to="/" class="header__logo">Anygrade</nuxt-link>
 				</div>
 				<div class="header__right">
-					<template v-if="">
-						<nuxt-link to="/account" class="header__button button button--danger">username</nuxt-link>
-						<nuxt-link @click=""  class="header__button button button--danger">Выйти</nuxt-link>
+					<template v-if="user.isAuthenticated">
+						<nuxt-link to="/account" class="header__button button button--danger">{{ user.name }}</nuxt-link>
+						<a @click="logout"  class="header__button button button--danger">Выйти</a>
 					</template>
 					<template v-else>
 						<nuxt-link to="/login" class="header__button button">Войти</nuxt-link>
@@ -39,6 +39,8 @@
 
 <script>
 
+import {mapActions, mapState} from "vuex";
+
 export default {
 	name: "TheHeader",
 	data() {
@@ -62,6 +64,16 @@ export default {
 				}
 			]
 		}
+	},
+	computed: {
+		...mapState({
+			user: state => state.auth.user
+		})
+	},
+	methods: {
+		...mapActions({
+			logout: 'auth/logout'
+		})
 	}
 }
 </script>
