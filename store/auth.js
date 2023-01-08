@@ -28,7 +28,7 @@ export const actions = {
 		commit('setUsername', data.login);
 		commit('setAuthenticated', true);
 	},
-	async logout({commit}) {
+	async logout({commit, state}) {
 		commit('setToken', null);
 		commit('setUsername', null);
 		commit('setAuthenticated', false);
