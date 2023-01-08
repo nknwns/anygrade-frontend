@@ -23,10 +23,24 @@ export const actions = {
 			commit('setLoading', true);
 
 			const templates = await this.$axios.$get('templates.json');
-			console.log(templates)
 
 			commit('setTemplates', templates);
 			commit('setLoading', false);
+		} catch (e) {
+			console.log(e);
+		}
+	},
+	async loadTemplate({commit}, id) {
+		try {
+			const templates = await this.$axios.$get('templates.json');
+			return templates.find(el => el.id == id);
+		} catch (e) {
+			console.log(e);
+		}
+	},
+	async removeTemplate({commit, state}, id) {
+		try {
+			// Fetch to remove template
 		} catch (e) {
 			console.log(e);
 		}

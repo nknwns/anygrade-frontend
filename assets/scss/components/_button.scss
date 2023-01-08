@@ -5,12 +5,11 @@
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    border: 1px solid transparent;
+    border: 1px solid #865ce2;
     padding: 0.5rem 0.9rem;
     font-size: .825rem;
-    font-weight: 500;
+    font-weight: bold;
     border-radius: 0.25rem;
-    border-color: #865ce2;
     display: inline-block;
 
     transition: background-color .5s ease, color .5s ease;
@@ -32,11 +31,11 @@
     &--danger {
         background-color: #ed5e5e;
         border-color: #ed5e5e;
-        
+
         &:hover {
             background-color: #c95050;
             border-color: #be4b4b;
-        }   
+        }
     }
 
     &--success {

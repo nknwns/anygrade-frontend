@@ -1,26 +1,56 @@
 [
 	{
-		"id": 0,
-		"title": "Заголовок",
-		"description": "Описание",
-		"questions": [],
-		"progress": 40,
-		"created_at": "2023-01-08T18:01:52.602Z"
-	},
-	{
 		"id": 1,
-		"title": "Заголовок",
+		"title": "Шаблон",
+		"created_at": "2023-01-08T18:23:49.024Z",
+		"author": {
+			"name": "Андрей Шаев",
+			"url": "andrejshaev"
+		},
 		"description": "Описание",
-		"questions": [],
-		"progress": 40,
-		"created_at": "2023-01-08T18:01:52.602Z"
+		"questions": [
+			{
+				"id": 1,
+				"url": "question-1",
+				"title": "Тестовый вопрос",
+				"category": "Тестовая категория"
+			}
+		]
 	},
 	{
 		"id": 2,
-		"title": "Заголовок",
+		"title": "Шаблон",
+		"created_at": "2023-01-08T18:23:49.024Z",
+		"author": {
+			"name": "Андрей Шаев",
+			"url": "andrejshaev"
+		},
 		"description": "Описание",
-		"questions": [],
-		"progress": 40,
-		"created_at": "2023-01-08T18:01:52.602Z"
+		"questions": [
+			{
+				"id": 1,
+				"url": "question-1",
+				"title": "Тестовый вопрос",
+				"category": "Тестовая категория"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"title": "Шаблон",
+		"created_at": "2023-01-08T18:23:49.024Z",
+		"author": {
+			"name": "Андрей Шаев",
+			"url": "andrejshaev"
+		},
+		"description": "Описание",
+		"questions": [
+			{
+				"id": 1,
+				"url": "question-1",
+				"title": "Тестовый вопрос",
+				"category": "Тестовая категория"
+			}
+		]
 	}
 ]

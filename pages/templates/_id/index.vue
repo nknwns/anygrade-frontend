@@ -32,7 +32,7 @@
 									</tr>
 									<tr>
 										<th>Дата создания</th>
-										<td>{{ template.created_at }}</td>
+										<td>{{ created_at }}</td>
 									</tr>
 									</tbody>
 								</table>
@@ -47,8 +47,8 @@
 				<div class="col-md-9">
 					<div class="line form">
 						<div class="form__group">
-							<a :href="template.id + '/remove'" class="button button--danger">Удалить шаблон</a>
-							<a :href="template.id +'/edit'" class="button">Редактировать шаблон</a>
+							<button @click="removeTemplate(template.id)" class="button button--danger">Удалить шаблон</button>
+							<nuxt-link :to="template.id +'/edit'" class="button">Редактировать шаблон</nuxt-link>
 						</div>
 						<div class="form__group">
 							<label for="question-title" hidden>Заголовок вопроса</label>
@@ -71,29 +71,33 @@
 	</section>
 </template>
 <script>
+import {mapActions} from "vuex";
+
 export default {
 	name: "TemplatePage",
 	data() {
 		return {
-			template: {
-				id: 1,
-				title: 'Шаблон',
-				created_at: new Date(),
-				author: {
-					name: 'Андрей Шаев',
-					url: 'andrejshaev'
-				},
-				description: 'Описание',
-				questions: [
-					{
-						id: 1,
-						url: 'question-1',
-						title: 'Тестовый вопрос',
-						category: 'Тестовая категория'
-					}
-				]
-			}
+			template: null
 		}
+	},
+	computed: {
+		created_at() {
+			return new Date(this.template.created_at).toLocaleString('ru');
+		}
+	},
+	methods: {
+		...mapActions({
+			_removeTemplate: 'templates/removeTemplate'
+		}),
+		removeTemplate(id) {
+			this._removeTemplate(id);
+			this.$router.push('/');
+		}
+	},
+	async asyncData({params, redirect, store}) {
+		const template = await store.dispatch('templates/loadTemplate', params.id);
+		if (!template) redirect('/');
+		return {template};
 	}
 }
 </script>
