@@ -1,0 +1,26 @@
+[
+	{
+		"id": 0,
+		"title": "Заголовок",
+		"description": "Описание",
+		"questions": [],
+		"progress": 40,
+		"created_at": "2023-01-08T18:01:52.602Z"
+	},
+	{
+		"id": 1,
+		"title": "Заголовок",
+		"description": "Описание",
+		"questions": [],
+		"progress": 40,
+		"created_at": "2023-01-08T18:01:52.602Z"
+	},
+	{
+		"id": 2,
+		"title": "Заголовок",
+		"description": "Описание",
+		"questions": [],
+		"progress": 40,
+		"created_at": "2023-01-08T18:01:52.602Z"
+	}
+]
