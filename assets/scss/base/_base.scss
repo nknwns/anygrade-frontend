@@ -33,3 +33,18 @@ main {
 .page-enter, .page-leave-to {
     opacity: 0;
 }
+
+.list-animation {
+	> div {
+		transition: all 1s;
+	}
+}
+
+.list-enter, .list-leave-to {
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+.list-complete-leave-active {
+	position: absolute;
+}

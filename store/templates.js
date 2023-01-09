@@ -1,10 +1,15 @@
 export const state = () => ({
 	templates: [],
-	isLoading: true
+	isLoading: true,
+	searchQuery: ''
 })
 
 export const getters = {
-
+	filteredTemplates(state) {
+		return state.templates.filter(element =>
+			element.title?.toLowerCase().includes(state.searchQuery.toLowerCase())
+			|| element.description?.toLowerCase().includes(state.searchQuery.toLowerCase()));
+	}
 }
 
 export const mutations = {
@@ -13,6 +18,9 @@ export const mutations = {
 	},
 	setLoading(state, loading) {
 		state.isLoading = loading;
+	},
+	setSearchQuery(state, query) {
+		state.searchQuery = query;
 	}
 }
 
