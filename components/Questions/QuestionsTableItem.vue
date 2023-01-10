@@ -1,7 +1,7 @@
 <template>
 	<tr>
 		<td>
-			<a :href="question.url" target="_blank">#{{ question.id }}</a>
+			<a :href="'/questions/' + question.id" target="_blank">#{{ question.id }}</a>
 		</td>
 		<td>
 			{{ question.title }}
@@ -17,8 +17,7 @@ export default {
 	name: "QuestionsTableItem",
 	props: {
 		question: {
-			id: Number,
-			url: String,
+			id: String,
 			title: String,
 			category: String
 		}

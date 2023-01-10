@@ -50,11 +50,6 @@
 							<button @click="removeTemplate(template.id)" class="button button--danger">Удалить шаблон</button>
 							<nuxt-link :to="template.id +'/edit'" class="button">Редактировать шаблон</nuxt-link>
 						</div>
-						<div class="form__group">
-							<label for="question-title" hidden>Заголовок вопроса</label>
-							<input name="question-title" id="question-title" type="text" class="form__input w-300" placeholder="Поиск вопроса...">
-							<button class="button button--secondary button--addon">Поиск</button>
-						</div>
 					</div>
 					<div class="card">
 						<div class="card__header">
