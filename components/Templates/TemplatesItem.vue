@@ -16,7 +16,7 @@
 						<div class="template-item__progress progress">
 							<div
 								class="progress__body progress__body--success"
-								:style="'width: ' + template.progress + '%'"
+								:style="'width: ' + progress + '%'"
 							></div>
 						</div>
 					</div>
@@ -35,18 +35,19 @@ export default {
 			description: String,
 			author: String,
 			created_at: Date,
-			questions: Array,
-			progress: Number
+			questions: Array
+		},
+		questionsLimit: {
+			type: Number,
+			default: 50
 		}
 	},
 	computed: {
 		created_at() {
 			return this.template.created_at.toLocaleDateString('ru');
-		}
-	},
-	data() {
-		return {
-			questionsLimit: 50
+		},
+		progress() {
+			return this.template.questions.length / this.questionsLimit * 100;
 		}
 	}
 }
