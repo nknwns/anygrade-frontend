@@ -4,6 +4,10 @@
 
     font-family: 'Rubik', sans-serif;
 
+	@media print {
+		display: none;
+	}
+
     &__menu {
         display: flex;
         align-items: center;

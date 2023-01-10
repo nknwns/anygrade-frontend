@@ -25,6 +25,10 @@ main {
     &.default {
         padding: 0;
     }
+
+	@media print {
+		padding: 0;
+	}
 }
 
 .page-enter-active, .page-leave-active {

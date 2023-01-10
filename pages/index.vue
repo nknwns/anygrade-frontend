@@ -30,6 +30,7 @@
 								<ButtonSorting
 									@change="toggleCurrentDirection"
 								/>
+								<button @click.prevent="clearOptions" class="button button--danger">Очистить</button>
 							</form>
 							<nuxt-link to="/templates/add" class="button button--success">+ Создать шаблон</nuxt-link>
 						</div>
@@ -90,7 +91,8 @@ export default {
 	methods: {
 		...mapMutations({
 			setTemplateSearchQuery: 'templates/setSearchQuery',
-			toggleCurrentDirection: 'templates/toggleCurrentDirection'
+			toggleCurrentDirection: 'templates/toggleCurrentDirection',
+			setCurrentDirection: 'templates/setCurrentDirection'
 		}),
 		...mapActions({
 			loadTemplates: 'templates/loadTemplates'
@@ -107,14 +109,20 @@ export default {
 
 			this.$router.push(newRoute);
 
-			this.$store.commit('templates/setSearchQuery', value);
+			this.setTemplateSearchQuery(value);
+		},
+		clearOptions() {
+			this.setCurrentDirection(false);
+			this.setTemplateSearchQuery('');
+			this.currentFilter = 'byID';
+			this.$router.push(this.$route.path);
 		}
 	},
 	mounted() {
 		this.loadTemplates();
 
 		if (this.$route.query.sort) this.currentFilter = this.$route.query.sort.replace('-', '');
-		if (this.$route.query.search) this.$store.commit('templates/setSearchQuery', this.$route.query.search);
+		if (this.$route.query.search) this.setTemplateSearchQuery(this.$route.query.search);
 	}
 }
 </script>

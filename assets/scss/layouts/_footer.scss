@@ -4,6 +4,10 @@
     color: #98a6ad;
     padding: 20px 12px;
 
+	@media print {
+		display: none;
+	}
+
     &__wrapper {
         display: flex;
         align-items: center;

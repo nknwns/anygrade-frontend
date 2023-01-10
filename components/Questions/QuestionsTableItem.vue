@@ -1,7 +1,7 @@
 <template>
 	<tr>
 		<td>
-			<a :href="'/questions/' + question.id" target="_blank">#{{ question.id }}</a>
+			<a :href="'/questions/' + question.id" target="_blank">{{ question.id }}</a>
 		</td>
 		<td>
 			{{ question.title }}

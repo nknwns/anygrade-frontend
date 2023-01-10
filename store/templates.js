@@ -57,6 +57,9 @@ export const mutations = {
 	},
 	toggleCurrentDirection(state) {
 		state.reverseDirection = !state.reverseDirection;
+	},
+	setCurrentDirection(state, value) {
+		state.reverseDirection = value;
 	}
 }
 
