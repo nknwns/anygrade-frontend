@@ -1,14 +1,13 @@
 <template>
 
 </template>
-
 <script>
 export default {
-	name: "TheHeader",
+	name: "ReviewsCopyPage",
 	layout: 'inProgress',
 	head() {
 		return {
-			title: 'Список вопросов - Anygrade'
+			title: 'Копирование шаблона - Anygrade'
 		}
 	}
 }

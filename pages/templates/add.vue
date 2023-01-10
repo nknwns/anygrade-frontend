@@ -5,6 +5,11 @@
 <script>
 export default {
 	name: "AddTemplatePage",
-	layout: 'inProgress'
+	layout: 'inProgress',
+	head() {
+		return {
+			title: 'Новый шаблон - Anygrade'
+		}
+	}
 }
 </script>

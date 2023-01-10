@@ -5,6 +5,11 @@
 <script>
 export default {
 	name: "TheHeader",
-	layout: 'inProgress'
+	layout: 'inProgress',
+	head() {
+		return {
+			title: 'Авторизация - Anygrade'
+		}
+	}
 }
 </script>

@@ -5,6 +5,11 @@
 <script>
 export default {
 	name: "EditTemplatePage",
-	layout: 'inProgress'
+	layout: 'inProgress',
+	head() {
+		return {
+			title: 'Редактирование шаблона - Anygrade'
+		}
+	}
 }
 </script>

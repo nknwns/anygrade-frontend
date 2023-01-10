@@ -5,7 +5,12 @@ script<template>
 <script>
 export default {
 	name: "TheHeader",
-	layout: 'inProgress'
+	layout: 'inProgress',
+	head() {
+		return {
+			title: 'Список шаблонов - Anygrade'
+		}
+	}
 }
 </script>
 

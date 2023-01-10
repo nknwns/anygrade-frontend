@@ -5,7 +5,7 @@
 				<div class="col-12">
 					<div class="section__header">
 						<h4 class="section__title">Просмотр шаблона</h4>
-						<a href="#" class="card__button button button--success">Использовать шаблон</a>
+						<nuxt-link to="/reviews/copy" class="card__button button button--success">Использовать шаблон</nuxt-link>
 					</div>
 				</div>
 			</div>
@@ -98,6 +98,11 @@ export default {
 		const template = await store.dispatch('templates/loadTemplate', params.id);
 		if (!template) redirect('/');
 		return {template};
+	},
+	head() {
+		return {
+			title: this.template.title + ' | Шаблон для опроса - Anygrade'
+		}
 	}
 }
 </script>
