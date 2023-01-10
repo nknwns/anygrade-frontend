@@ -82,7 +82,7 @@ export default {
 	},
 	computed: {
 		created_at() {
-			return new Date(this.template.created_at).toLocaleString('ru');
+			return this.template.created_at.toLocaleString('ru');
 		}
 	},
 	methods: {

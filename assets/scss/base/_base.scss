@@ -38,6 +38,19 @@ main {
 	> div {
 		transition: all 1s;
 	}
+
+	position: relative;
+
+	&__message {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 18px;
+
+		&.list-enter, &.list-leave-to {
+			transform: translateY(-20px);
+		}
+	}
 }
 
 .list-enter, .list-leave-to {

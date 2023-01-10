@@ -1,8 +1,8 @@
 [
 	{
 		"id": 1,
-		"title": "Шаблон ААА",
-		"created_at": "2023-01-08T18:23:49.024Z",
+		"title": "А",
+		"created_at": "2023-01-09T18:23:49.024Z",
 		"author": {
 			"name": "Андрей Шаев",
 			"url": "andrejshaev"
@@ -19,8 +19,8 @@
 	},
 	{
 		"id": 2,
-		"title": "Шаблон АББ",
-		"created_at": "2023-01-08T18:23:49.024Z",
+		"title": "Б",
+		"created_at": "2023-01-07T18:23:49.024Z",
 		"author": {
 			"name": "Андрей Шаев",
 			"url": "andrejshaev"
@@ -37,7 +37,97 @@
 	},
 	{
 		"id": 3,
-		"title": "Шаблон БББ",
+		"title": "В",
+		"created_at": "2023-01-08T18:23:49.024Z",
+		"author": {
+			"name": "Андрей Шаев",
+			"url": "andrejshaev"
+		},
+		"description": "Описание",
+		"questions": [
+			{
+				"id": 1,
+				"url": "question-1",
+				"title": "Тестовый вопрос",
+				"category": "Тестовая категория"
+			}
+		]
+	},
+	{
+		"id": 8,
+		"title": "Г",
+		"created_at": "2023-01-08T18:23:49.024Z",
+		"author": {
+			"name": "Андрей Шаев",
+			"url": "andrejshaev"
+		},
+		"description": "Описание",
+		"questions": [
+			{
+				"id": 1,
+				"url": "question-1",
+				"title": "Тестовый вопрос",
+				"category": "Тестовая категория"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"title": "Д",
+		"created_at": "2023-01-08T18:23:49.024Z",
+		"author": {
+			"name": "Андрей Шаев",
+			"url": "andrejshaev"
+		},
+		"description": "Описание",
+		"questions": [
+			{
+				"id": 1,
+				"url": "question-1",
+				"title": "Тестовый вопрос",
+				"category": "Тестовая категория"
+			}
+		]
+	},
+	{
+		"id": 6,
+		"title": "Е",
+		"created_at": "2023-01-08T18:23:49.024Z",
+		"author": {
+			"name": "Андрей Шаев",
+			"url": "andrejshaev"
+		},
+		"description": "Описание",
+		"questions": [
+			{
+				"id": 1,
+				"url": "question-1",
+				"title": "Тестовый вопрос",
+				"category": "Тестовая категория"
+			}
+		]
+	},
+	{
+		"id": 7,
+		"title": "Ж",
+		"created_at": "2023-01-08T18:23:49.024Z",
+		"author": {
+			"name": "Андрей Шаев",
+			"url": "andrejshaev"
+		},
+		"description": "Описание",
+		"questions": [
+			{
+				"id": 1,
+				"url": "question-1",
+				"title": "Тестовый вопрос",
+				"category": "Тестовая категория"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"title": "З",
 		"created_at": "2023-01-08T18:23:49.024Z",
 		"author": {
 			"name": "Андрей Шаев",

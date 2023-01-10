@@ -6,7 +6,7 @@
     text-decoration: none;
     vertical-align: middle;
     border: 1px solid #865ce2;
-    padding: 0.5rem 0.9rem;
+    padding: 0.5rem 1rem;
     font-size: .825rem;
     font-weight: bold;
     border-radius: 0.25rem;
@@ -15,12 +15,12 @@
     transition: background-color .5s ease, color .5s ease;
 
     &--icon {
-        height: calc(1rem + 1.5em + 2px);
-        width: calc(1rem + 1.5em + 2px);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
+        padding: .125rem .25rem;
+		transition: opacity .5s ease;
+
+		&.button--success {
+			opacity: .5;
+		}
     }
 
     &:hover {

@@ -41,7 +41,7 @@ export default {
 	},
 	computed: {
 		created_at() {
-			return new Date(this.template.created_at).toLocaleDateString('ru');
+			return this.template.created_at.toLocaleDateString('ru');
 		}
 	},
 	data() {
