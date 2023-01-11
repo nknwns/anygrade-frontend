@@ -1,8 +1,12 @@
 .footer {
-    height: 60px;
     background-color: #fff;
     color: #98a6ad;
-    padding: 20px 12px;
+    padding: 1rem 2rem;
+    
+    @media screen and (min-width: 756px) {
+        padding: 20px 12px;
+        height: 60px;
+    }
 
 	@media print {
 		display: none;
@@ -12,5 +16,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+
+        @media screen and (min-width: 756px) {
+            flex-direction: row;
+            text-align: start;
+            gap: 0;
+        }
     }
 }
