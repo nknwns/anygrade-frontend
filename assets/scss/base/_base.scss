@@ -19,8 +19,10 @@ ul {
 }
 
 main {
-    min-height: calc(100vh - 60px);
-    padding: 140px 0 30px;
+	@media screen and (min-width: 756px) {
+		min-height: calc(100vh - 60px);
+    	padding: 140px 0 30px;
+	}
 
     &.default {
         padding: 0;

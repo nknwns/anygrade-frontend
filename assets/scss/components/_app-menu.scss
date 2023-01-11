@@ -11,11 +11,19 @@
     &__menu {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        @media screen and (min-width: 756px) {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
     }
 
     &__item:first-child &__link {
-        padding-left: 0;
+        @media screen and (min-width: 756px) {
+            padding-left: 0;
+        }
     }
 
     &__link {

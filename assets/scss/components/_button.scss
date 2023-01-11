@@ -11,8 +11,13 @@
     font-weight: bold;
     border-radius: 0.25rem;
     display: inline-block;
+    width: 100%;
 
     transition: background-color .5s ease, color .5s ease;
+
+    @media screen and (min-width: 756px) {
+        width: max-content;
+    }
 
     &--icon {
         padding: .125rem .25rem;

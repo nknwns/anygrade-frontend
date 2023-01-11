@@ -1,12 +1,12 @@
 <template>
 	<section class="template section">
 		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section__header">
-						<h4 class="section__title">Просмотр шаблона</h4>
-						<nuxt-link to="/reviews/copy" class="card__button button button--success">Использовать шаблон</nuxt-link>
-					</div>
+			<div class="section__header row">
+				<div class="col-12 col-md-2">
+					<h4 class="section__title">Просмотр шаблона</h4>
+				</div>
+				<div class="section__line col-12 col-md-10">
+					<nuxt-link to="/reviews/copy" class="card__button button button--success">Использовать шаблон</nuxt-link>
 				</div>
 			</div>
 			<div class="row">

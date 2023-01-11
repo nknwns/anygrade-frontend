@@ -33,8 +33,8 @@
 						<p v-else>Список вопросов пуст</p>
 					</div>
 				</div>
-				<div class="buttons">
-					<a href="#" class="button">Отменить</a>
+				<div class="form__buttons">
+					<nuxt-link to="/" class="button">Отменить</nuxt-link>
 					<button class="button button--success">Сохранить</button>
 				</div>
 			</div>

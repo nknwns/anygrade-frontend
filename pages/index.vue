@@ -2,38 +2,38 @@
 <template>
 	<section class="template section">
 		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section__header">
-						<h4 class="section__title">Список шаблонов</h4>
-						<div class="section__line">
-							<form action="#" class="form section__filters">
-								<label for="templatename" class="form__label" hidden>Search</label>
-								<input :value="templateSearchQuery"
-									   @input="updateTemplateSearchQuery"
-									   type="text"
-									   class="form__input"
-									   id="templatename"
-									   name="templatename"
-									   placeholder="Поиск шаблона.."
+			<div class="section__header row">
+				<div class="col-12 col-md-2">
+					<h4 class="section__title">Список шаблонов</h4>
+				</div>
+				<div class="col-12 col-md-10">
+					<div class="section__line">
+						<form action="#" class="form section__filters">
+							<label for="templatename" class="form__label" hidden>Search</label>
+							<input :value="templateSearchQuery"
+									@input="updateTemplateSearchQuery"
+									type="text"
+									class="form__input"
+									id="templatename"
+									name="templatename"
+									placeholder="Поиск шаблона.."
+							>
+							<label for="templatefilter" class="form__label" hidden>Filter</label>
+							<select v-model="currentFilter" id="templatefilter" name="templatefilter" class="form__input">
+								<option
+									v-for="(filter, i) in filters"
+									:key="'filter-' + i"
+									:value="filter.value"
 								>
-								<label for="templatefilter" class="form__label" hidden>Filter</label>
-								<select v-model="currentFilter" id="templatefilter" name="templatefilter" class="form__input">
-									<option
-										v-for="(filter, i) in filters"
-										:key="'filter-' + i"
-										:value="filter.value"
-									>
-										{{ filter.text }}
-									</option>
-								</select>
-								<ButtonSorting
-									@change="toggleCurrentDirection"
-								/>
-								<button @click.prevent="clearOptions" class="button button--danger">Очистить</button>
-							</form>
-							<nuxt-link to="/templates/add" class="button button--success">+ Создать шаблон</nuxt-link>
-						</div>
+									{{ filter.text }}
+								</option>
+							</select>
+							<ButtonSorting
+								@change="toggleCurrentDirection"
+							/>
+							<button @click.prevent="clearOptions" class="button button--danger">Очистить</button>
+						</form>
+						<nuxt-link to="/templates/add" class="button button--success">+ Создать шаблон</nuxt-link>
 					</div>
 				</div>
 			</div>
