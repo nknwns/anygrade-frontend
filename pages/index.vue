@@ -1,10 +1,10 @@
-<script src="../../mospolytech/Семестр 3/Курсач/anygrade-vue/src/main.js"></script>
 <template>
 	<section class="template section">
+		<h1 hidden>Система оценки сотрудников - шаблоны</h1>
 		<div class="container">
 			<div class="section__header row">
 				<div class="col-12 col-md-2">
-					<h4 class="section__title">Список шаблонов</h4>
+					<h2 class="section__title">Список шаблонов</h2>
 				</div>
 				<div class="col-12 col-md-10">
 					<div class="section__line">

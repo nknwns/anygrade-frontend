@@ -1,9 +1,10 @@
 <template>
 	<section class="template section">
+		<h1 hidden>Сервис оценки сотрудников</h1>
 		<div class="container">
 			<div class="section__header row">
 				<div class="col-12 col-md-2">
-					<h4 class="section__title">Просмотр шаблона</h4>
+					<h2 class="section__title">Просмотр шаблона</h2>
 				</div>
 				<div class="section__line col-12 col-md-10">
 					<nuxt-link to="/reviews/copy" class="card__button button button--success">Использовать шаблон</nuxt-link>
@@ -14,7 +15,7 @@
 					<div class="card">
 						<div class="card__body">
 							<div class="template__header">
-								<h5 class="template__title">{{ template.title }}</h5>
+								<h3 class="template__title">{{ template.title }}</h3>
 								<p class="template__id">ID: #{{ template.id }}</p>
 							</div>
 							<div class="template__description">
@@ -39,7 +40,7 @@
 							</div>
 						</div>
 						<div class="card__body card__body--border-top">
-							<h6 class="card__subtitle">Описание</h6>
+							<h4 class="card__subtitle">Описание</h4>
 							<p class="card__text">{{ template.description }}</p>
 						</div>
 					</div>
@@ -53,7 +54,7 @@
 					</div>
 					<div class="card">
 						<div class="card__header">
-							<h5 class="card__title">Список вопросов</h5>
+							<h4 class="card__title">Список вопросов</h4>
 						</div>
 						<div class="card__body">
 							<QuestionsTable

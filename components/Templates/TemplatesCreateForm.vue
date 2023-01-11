@@ -26,7 +26,7 @@
 				</div>
 				<div class="card">
 					<div class="card__header">
-						<h5 class="card__title">Список вопросов</h5>
+						<h3 class="card__title">Список вопросов</h3>
 					</div>
 					<div class="card__body">
 						<QuestionsTable v-if="questions.length" :questions="questions" />
@@ -41,7 +41,7 @@
 			<div class="col-lg-4">
 				<div class="card">
 					<div class="card__header">
-						<h5 class="card__title">Создать вопрос</h5>
+						<h3 class="card__title">Создать вопрос</h3>
 					</div>
 					<div class="card__body">
 						<FormField id="questions-title" label="Содержание">
@@ -71,7 +71,7 @@
 				</div>
 				<div class="card">
 					<div class="card__header">
-						<h5 class="card__title">Добавить вопрос</h5>
+						<h3 class="card__title">Добавить вопрос</h3>
 					</div>
 					<div class="card__body">
 						<FormField id="question-name" label="Выберите существующий вопрос">

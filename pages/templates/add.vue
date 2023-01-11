@@ -1,10 +1,11 @@
 <template>
 	<section class="template section">
+		<h1 hidden>Сервис оценки сотрудников - новый шаблон</h1>
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="section__header">
-						<h4 class="section__title">Создание шаблона</h4>
+						<h2 class="section__title">Создание шаблона</h2>
 					</div>
 				</div>
 				<TemplatesCreateForm

@@ -7,7 +7,7 @@
 						<span class="template-item__date">{{ created_at }}</span>
 					</div>
 					<div class="template-item__content">
-						<h5 class="template-item__title">{{ template.title }}</h5>
+						<h3 class="template-item__title">{{ template.title }}</h3>
 						<p class="template-item__description">{{ template.description }}</p>
 						<div class="template-item__counters">
 							<span>Вопросы</span>
