@@ -8,10 +8,10 @@
 				<div class="header__right">
 					<template v-if="user.isAuthenticated">
 						<nuxt-link to="/account" class="header__button button button--success">{{ user.name }}</nuxt-link>
-						<a @click="logoutUser"  class="header__button button button--danger">Выйти</a>
+						<button @click.prevent="logoutUser" class="header__button button button--danger">Выйти</button>
 					</template>
 					<template v-else>
-						<nuxt-link to="/login" class="header__button button">Войти</nuxt-link>
+						<button @click.prevent="loginUser" class="header__button button">Войти</button>
 						<nuxt-link to="/registration" class="header__button button button--danger">Регистрация</nuxt-link>
 					</template>
 				</div>
@@ -72,8 +72,15 @@ export default {
 	},
 	methods: {
 		...mapActions({
-			logout: 'auth/logout'
+			logout: 'auth/logout',
+			login: 'auth/login'
 		}),
+		loginUser() {
+			this.login({
+				login: 'andrejshaev',
+				password: 'andrejshaev'
+			});
+		},
 		logoutUser() {
 			this.logout();
 			this.$router.push('/')
