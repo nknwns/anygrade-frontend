@@ -56,7 +56,10 @@
 							<h5 class="card__title">Список вопросов</h5>
 						</div>
 						<div class="card__body">
-							<QuestionsTable v-if="template.questions.length" :questions="template.questions" />
+							<QuestionsTable
+								v-if="template.questions.length"
+								:questions="template.questions"
+							/>
 							<p v-else>Список вопросов пуст..</p>
 						</div>
 					</div>

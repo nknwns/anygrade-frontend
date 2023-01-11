@@ -33,16 +33,6 @@
         border-color: #6b4ab5;
     }
 
-    &--danger {
-        background-color: #ed5e5e;
-        border-color: #ed5e5e;
-
-        &:hover {
-            background-color: #c95050;
-            border-color: #be4b4b;
-        }
-    }
-
     &--success {
         color: #fff;
         background-color: #13c56b;
@@ -62,6 +52,17 @@
         &:hover {
             color: #fff;
             background-color: #865ce2;
+        }
+    }
+
+    &--danger {
+        background-color: #ed5e5e;
+        border-color: #ed5e5e;
+        color: #fff;
+
+        &:hover {
+            background-color: #c95050;
+            border-color: #be4b4b;
         }
     }
 
