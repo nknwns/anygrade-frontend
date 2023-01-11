@@ -1,12 +1,18 @@
 <template>
 	<section class="template section">
 		<h1 hidden>Система оценки сотрудников - шаблоны</h1>
-		<div class="container">
-			<div class="section__header row">
-				<div class="col-12 col-md-2">
-					<h2 class="section__title">Список шаблонов</h2>
-				</div>
-				<div class="col-12 col-md-10">
+		<v-container>
+			<v-row class="section__header">
+				<v-col
+					cols="12"
+					md="3"
+				>
+					<h2 class="section__title">Выберите шаблон</h2>
+				</v-col>
+				<v-col
+					cols="12"
+					md="9"
+				>
 					<div class="section__line">
 						<form action="#" class="form section__filters">
 							<label for="templatename" class="form__label" hidden>Search</label>
@@ -31,15 +37,28 @@
 							<ButtonSorting
 								@change="toggleCurrentDirection"
 							/>
-							<button @click.prevent="clearOptions" class="button button--danger">Очистить</button>
+							<v-btn
+								@click.prevent="clearOptions"
+								color="success"
+								class="btn btn--danger"
+							>
+								Очистить
+							</v-btn>
 						</form>
-						<nuxt-link to="/templates/add" class="button button--success">+ Создать шаблон</nuxt-link>
+						<v-btn color="success" class="btn btn--success">
+							<nuxt-link to="/templates/add">+ Создать шаблон</nuxt-link>
+						</v-btn>
 					</div>
-				</div>
-			</div>
-			<div class="row" v-if="isLoading">
+				</v-col>
+				<v-col cols="12">
+					<v-alert type="info">
+						<p>Выберите понравившийся вам шаблон, изучите его и скопируйте для использования. Если вы не нашли необходимый вам шаблон, создайте новый прямо сейчас.</p>
+					</v-alert>
+				</v-col>
+			</v-row>
+			<v-row class="row" v-if="isLoading">
 				<p>Загрузка шаблонов..</p>
-			</div>
+			</v-row>
 			<transition-group name="list" tag="div" class="row list-animation" v-else>
 				<div class="col-12 list-animation__message" :key="'empty-' + templates.length" v-if="!templates.length">
 					<p>Список шаблонов пуст..</p>
@@ -50,7 +69,7 @@
 					:template="template"
 				/>
 			</transition-group>
-		</div>
+		</v-container>
 	</section>
 </template>
 

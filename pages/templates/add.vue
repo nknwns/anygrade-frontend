@@ -1,20 +1,27 @@
 <template>
 	<section class="template section">
 		<h1 hidden>Сервис оценки сотрудников - новый шаблон</h1>
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
+		<v-container>
+			<v-row>
+				<v-col
+					cols="12"
+				>
 					<div class="section__header">
-						<h2 class="section__title">Создание шаблона</h2>
+						<h2 class="section__title">Создайте шаблон</h2>
 					</div>
-				</div>
+				</v-col>
+				<v-col cols="12">
+					<v-alert type="info">
+						<p>Заполните форму, чтобы создать новый шаблон опроса. Введите заголовок, описание и выберите необходимые вопросы. В случае отсутствия вопроса, создайте новый.</p>
+					</v-alert>
+				</v-col>
 				<TemplatesCreateForm
 					:questionsList="questions"
 					:categoriesList="categories"
 					@send="createTemplate"
 				/>
-			</div>
-		</div>
+			</v-row>
+		</v-container>
 	</section>
 </template>
 

@@ -7,7 +7,7 @@
 			{{ question.title }}
 		</td>
 		<td>
-			<span class="badge badge--secondary">{{ question.category }}</span>
+			<v-chip>{{ question.category }}</v-chip>
 		</td>
 	</tr>
 </template>

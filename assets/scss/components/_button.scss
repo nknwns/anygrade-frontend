@@ -74,3 +74,13 @@
         width: 50%;
     }
 }
+
+.btn {
+    &--danger {
+        background-color: #ed5e5e!important;
+    }
+
+    &--success {
+        background-color: #13c56b!important;
+    }
+}

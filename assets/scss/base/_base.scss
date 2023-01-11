@@ -22,8 +22,8 @@ main {
 	min-height: calc(100vh - 390px);
 
 	@media screen and (min-width: 756px) {
-		min-height: calc(100vh - 60px);
-    	padding: 140px 0 30px;
+		min-height: calc(100vh - 220px);
+		margin-top: 160px;
 	}
 
     &.default {
@@ -68,4 +68,14 @@ main {
 
 .list-complete-leave-active {
 	position: absolute;
+}
+
+.account {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.v-alert {
+	background-color: #2196f3 !important;
 }

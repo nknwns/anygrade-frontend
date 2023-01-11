@@ -3,10 +3,10 @@
 		<h1 hidden>Сервис оценки сотрудников</h1>
 		<div class="container">
 			<div class="section__header row">
-				<div class="col-12 col-md-2">
+				<div class="col-12 col-md-3">
 					<h2 class="section__title">Просмотр шаблона</h2>
 				</div>
-				<div class="section__line col-12 col-md-10">
+				<div class="section__line col-12 col-md-9">
 					<nuxt-link to="/reviews/copy" class="button button--success">Использовать шаблон</nuxt-link>
 				</div>
 			</div>
