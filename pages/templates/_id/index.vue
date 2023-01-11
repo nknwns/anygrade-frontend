@@ -7,7 +7,7 @@
 					<h2 class="section__title">Просмотр шаблона</h2>
 				</div>
 				<div class="section__line col-12 col-md-10">
-					<nuxt-link to="/reviews/copy" class="card__button button button--success">Использовать шаблон</nuxt-link>
+					<nuxt-link to="/reviews/copy" class="button button--success">Использовать шаблон</nuxt-link>
 				</div>
 			</div>
 			<div class="row">
