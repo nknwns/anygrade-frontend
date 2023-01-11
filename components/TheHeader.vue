@@ -14,6 +14,8 @@
 						<button @click.prevent="loginUser" class="header__button button">Войти</button>
 						<nuxt-link to="/registration" class="header__button button button--danger">Регистрация</nuxt-link>
 					</template>
+					<a href="/templates.json" target="_blank" class="button">Просмотр файла</a>
+					<a href="https://github.com/nknwns/anygrade-frontend" target="_blank" class="button">GitHub</a>
 				</div>
 			</div>
 		</div>
