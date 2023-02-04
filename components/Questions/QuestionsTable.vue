@@ -62,6 +62,14 @@ export default {
 			id: this.categories.length,
 			title: question.category
 		}))
+	},
+	beforeUpdate() {
+		this.categories = [];
+		
+		this.categories = this.questions.map(question => ({
+			id: this.categories.length,
+			title: question.category
+		}))
 	}
 }
 
